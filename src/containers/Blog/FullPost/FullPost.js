@@ -6,8 +6,8 @@ class FullPost extends Component {
     loadedPost: null
   };
 
-  componentDidUpdate() {
-    const id = this.props.id;
+  componentDidMount() {
+    const id = this.props.match.params.id;
     if (id) {
       if (!this.state.loadedPost || (this.state.loadedPost
           && this.state.loadedPost.id !== this.props.id)) {
